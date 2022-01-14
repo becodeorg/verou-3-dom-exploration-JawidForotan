@@ -28,6 +28,9 @@ nav ul li a {
   text-decoration: none;
   color: rgb(68, 65, 65);
 }
+nav ul li a:hover {
+  color: white;
+}
 .logo img:hover {
   transform: translateX(5px);
   cursor: pointer;
@@ -93,8 +96,33 @@ nav ul li a {
     font-size: large;
   }
 }
+@media (min-width: 540px) {
+  .collection-sec {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+  }
+  .container {
+    margin: 10px;
+    border: 1px solid rgb(66, 65, 65);
+    border-radius: 15px;
+    box-shadow: 5px 5px 7px rgb(109, 108, 108);
+  }
+  .imageDiv img {
+    max-width: 200px;
+    border-radius: 15px 15px 0 0;
+  }
+  .description {
+    padding: 10px 10px;
+    border-radius: 0 0 15px 15px;
+    background-color: rgb(220, 250, 193);
+  }
+  footer {
+    min-width: 100%;
+  }
+}
 /* Desktop*/
-@media (min-width: 1024px) {
+@media (min-width: 1080px) {
   .collection-sec {
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -107,7 +135,7 @@ nav ul li a {
     box-shadow: 5px 5px 7px rgb(109, 108, 108);
   }
   .container:hover {
-    transform: translateY(-8px);
+    transform: translateY(-5px);
     cursor: pointer;
   }
   .imageDiv img {
@@ -116,6 +144,7 @@ nav ul li a {
   }
   .description {
     padding: 20px 10px;
+    line-height: 20px;
     border-radius: 0 0 15px 15px;
     background-color: rgb(220, 250, 193);
   }
@@ -127,7 +156,33 @@ footer {
   padding: 14px;
   color: rgb(68, 65, 65);
   width: 100%;
-  font-weight: bold;
-  border: 1px solid rgb(36, 35, 35);
   background-color: rgb(157, 206, 133);
+}
+footer img {
+  width: 40px;
+  padding: 3px;
+}
+footer img:hover {
+  transform: translateY(-4px);
+  cursor: pointer;
+}
+.nameClass {
+  color: red;
+}
+.byProductClass {
+  margin: 10px 0px;
+  padding: 5px 15px;
+  background-color: rgb(57, 209, 214);
+  line-height: 30px;
+  border-radius: 10px;
+}
+.description .byProductClass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.byProductClass:hover {
+  cursor: pointer;
+  background-color: rgb(52, 171, 175);
+  color: white;
 }

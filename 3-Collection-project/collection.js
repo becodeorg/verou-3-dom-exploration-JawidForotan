@@ -7,6 +7,7 @@ const Flowers = [
     color: "Color: Dark red",
     PlantPeriode: "Plant: july-november",
     FloweringPeriod: "Flower: december",
+    buyProduct: "Buy",
   },
   {
     picture: "./images/Anemoon Mr. Fokker.jpg",
@@ -16,6 +17,7 @@ const Flowers = [
     color: "Color: Purple",
     PlantPeriode: "Plant: august-november",
     FloweringPeriod: "Flower: january-december",
+    buyProduct: "Buy",
   },
   {
     picture: "./images/Barcelona.jpg",
@@ -25,6 +27,7 @@ const Flowers = [
     color: "Color: Hot pink",
     PlantPeriode: "Plant: august-november",
     FloweringPeriod: "Flower: january-december",
+    buyProduct: "Buy",
   },
   {
     picture: "./images/Prinses Irene.jpg",
@@ -34,6 +37,7 @@ const Flowers = [
     color: "Color: Orange",
     PlantPeriode: "Plant: august-november",
     FloweringPeriod: "Flower: january-december",
+    buyProduct: "Buy",
   },
   {
     picture: "./images/Carnaval de Nice.jpg",
@@ -43,6 +47,7 @@ const Flowers = [
     color: "Color: White Pink",
     PlantPeriode: "Plant: august-november",
     FloweringPeriod: "Flower: january-december",
+    buyProduct: "Buy",
   },
   {
     picture: "./images/Groenland.jpg",
@@ -52,6 +57,7 @@ const Flowers = [
     color: "Color: Light Pink",
     PlantPeriode: "Plant: august-november",
     FloweringPeriod: "Flower: january-december",
+    buyProduct: "Buy",
   },
   {
     picture: "./images/Negrita Dubbel.jpg",
@@ -61,6 +67,7 @@ const Flowers = [
     color: "Color: Purple",
     PlantPeriode: "Plant: august-november",
     FloweringPeriod: "Flower: january-december",
+    buyProduct: "Buy",
   },
   {
     picture: "./images/Blanda Blue Shade.jpg",
@@ -70,6 +77,7 @@ const Flowers = [
     color: "Color: Dark Blue",
     PlantPeriode: "Plant: august-november",
     FloweringPeriod: "Flower: january-december",
+    buyProduct: "Buy",
   },
   {
     picture: "./images/Ranonkel Oranje.jpg",
@@ -79,6 +87,7 @@ const Flowers = [
     color: "Color: Orange",
     PlantPeriode: "Plant: august-november",
     FloweringPeriod: "Flower: january-december",
+    buyProduct: "Buy",
   },
   {
     picture: "./images/Ranonkel Rood.jpg",
@@ -88,9 +97,11 @@ const Flowers = [
     color: "Color: Dark Red",
     PlantPeriode: "Plant: august-november",
     FloweringPeriod: "Flower: january-december",
+    buyProduct: "Buy",
   },
 ];
-console.log(Flowers.length);
+
+/* Select the section element by class name */
 const sec = document.querySelector(".collection-sec");
 for (let i = 0; i < Flowers.length; i++) {
   // container
@@ -98,9 +109,10 @@ for (let i = 0; i < Flowers.length; i++) {
   containerDiv.className = "container";
   sec.appendChild(containerDiv);
 
-  // imageDiv
+  // image
   let imgDiv = document.createElement("div");
   imgDiv.className = "imageDiv";
+  containerDiv.appendChild(imgDiv);
 
   let image = document.createElement("img");
   let nameH = document.createElement("h3");
@@ -109,13 +121,14 @@ for (let i = 0; i < Flowers.length; i++) {
   let colorP = document.createElement("p");
   let FloweringPeriodP = document.createElement("p");
   let PlantPeriodeP = document.createElement("p");
+  let byProductA = document.createElement("a");
 
   // description
   let DescriptionDiv = document.createElement("div");
   DescriptionDiv.className = "description";
-
-  containerDiv.appendChild(imgDiv);
   containerDiv.appendChild(DescriptionDiv);
+
+  // Append child to the the containers
   imgDiv.appendChild(image);
   DescriptionDiv.appendChild(nameH);
   DescriptionDiv.appendChild(priceH);
@@ -123,7 +136,9 @@ for (let i = 0; i < Flowers.length; i++) {
   DescriptionDiv.appendChild(colorP);
   DescriptionDiv.appendChild(PlantPeriodeP);
   DescriptionDiv.appendChild(FloweringPeriodP);
+  DescriptionDiv.appendChild(byProductA);
 
+  // Set the inner text of the element to the array variables
   image.src = Flowers[i].picture;
   nameH.innerText = Flowers[i].name;
   priceH.innerText = Flowers[i].price;
@@ -131,4 +146,8 @@ for (let i = 0; i < Flowers.length; i++) {
   colorP.innerText = Flowers[i].color;
   PlantPeriodeP.innerText = Flowers[i].PlantPeriode;
   FloweringPeriodP.innerText = Flowers[i].FloweringPeriod;
+  byProductA.innerText = Flowers[i].buyProduct;
+
+  let flowerClassName = (priceH.className = "nameClass");
+  let byFlower = (byProductA.className = "byProductClass");
 }
