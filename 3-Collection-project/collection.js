@@ -103,6 +103,7 @@ const Flowers = [
 
 /* Select the section element by class name */
 const sec = document.querySelector(".collection-sec");
+
 for (let i = 0; i < Flowers.length; i++) {
   // container
   let containerDiv = document.createElement("div");
@@ -151,3 +152,5 @@ for (let i = 0; i < Flowers.length; i++) {
   let flowerClassName = (priceH.className = "nameClass");
   let byFlower = (byProductA.className = "byProductClass");
 }
+
+
