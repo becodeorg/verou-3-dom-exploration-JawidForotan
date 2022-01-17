@@ -1,0 +1,39 @@
+body {
+  margin: auto;
+  transition: 0.3s;
+}
+
+.actionSquare,
+.displayedSquare {
+  margin: 25px;
+  height: 50px;
+  width: 50px;
+  transition: 0.3s;
+}
+
+.actionSquare:hover {
+  transform: scale(1.5);
+}
+
+.green {
+  background-color: lime;
+}
+
+.violet {
+  background-color: magenta;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.actionSquare-wrapper,
+.displayedSquare-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main {
+  max-width: 1000px;
+  margin: 100px auto;
+}
